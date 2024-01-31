@@ -58,6 +58,12 @@
         }
     }
 
+    $dog = new Category("Cane");
+    $cat = new Category("Gatto");
+    $fish = new Category("Pesci");
+    $bird = new Category("Uccelli");
+
+
 
 
     // Subclasses Foods
