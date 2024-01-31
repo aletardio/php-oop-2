@@ -113,7 +113,7 @@
         </div>
     </header>
 
-    <main>    
+    <main class="py-5">    
         <div class="container">
             <div class="row">
                 <?php foreach ($products as $product) {?>
