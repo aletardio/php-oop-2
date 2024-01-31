@@ -63,16 +63,16 @@
     $fish = new Category("Pesci");
     $bird = new Category("Uccelli");
 
-    $product_1 = new Food('Royal Canin Mini Adult', 8.20, 'Manzo', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000");
-    $product_2 = new Food('Almo Nature Holistic Maintenance Medium Large', 29.89, 'Tonno e Riso', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-dog-adult-medium-pollo-e-riso.jpg");
-    $product_3 = new Food('Almo Nature Cat Daily Lattina', 0.65, 'Vitello', $cat, "https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg");
-    $product_4 = new Food('Mangime per Pesci Guppy in Fiocchi', 3.36, 'Fiochhi', $fish, "https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg");
+    $product_1 = new Food('Royal Canin', 8.20, 'Mini Adult', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000","Crocchette/Secco", "Manzo");
+    $product_2 = new Food('Almo Nature', 29.89, 'Holistic Maintenance Medium Large', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-dog-adult-medium-pollo-e-riso.jpg","Crocchette/Secco", "Pollo e riso");
+    $product_3 = new Food('Almo Nature', 0.65, 'Cat Daily Lattina', $cat, "https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg","Umido", "Vitello");
+    $product_4 = new Food('Guppy', 3.36, 'Mangime per pesci in fiocchi', $fish, "https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg","Fiocchi", "/");
 
-    $product_5 = new Toy('Kong Classic', 18.99, 'Plastica Dura', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg");
-    $product_6 = new Toy('Topini di peluche Trixie', 7.99, 'Plastica/Poliestere', $cat, "https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg");
+    $product_5 = new Toy('Kong', 18.99, 'Kong Classic', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg","Cani di taglia medio/grande", "Plastica dura");
+    $product_6 = new Toy('Trixie', 7.99, 'Topini di peluche', $cat, "https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg","Gatti di tutte le taglie", "Plastica/Polyestere");
 
-    $product_7 = new Accessory('Voliera Wilma', 339, 'Legno', $bird, "https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg");
-    $product_8 = new Accessory('Cartucce Filtranti per Filtro EasyCrystal', 3, 'Materiale Naturale', $fish, "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000");
+    $product_7 = new Accessory('Wilma', 339, 'Voliera', $bird, "https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg","Uccelli di piccola taglia", "Legno");
+    $product_8 = new Accessory('EasyCrystal', 3, 'Cartucce Filtranti per Filtro ', $fish, "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000","Acquari per pesci", "Materiale naturale");
 
 
     $products = [
@@ -97,6 +97,5 @@
     <title>OOP Shop</title>
 </head>
 <body>
-    
 </body>
 </html>
