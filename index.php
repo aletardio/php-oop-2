@@ -25,13 +25,13 @@
     }
 
     class Food extends Products {
-        public $deadline;
-        public $calories;
+        public $madeFor;
+        public $madeOf;
 
-        function __construct($_name, $_price, $_description, $_category, $_image, $_deadline, $_calories){
+        function __construct($_name, $_price, $_description, $_category, $_image, $_madeFor, $_madeOf){
             parent::__construct($_name, $_price, $_description, $_category, $_image);
-            $this->deadline = $_deadline;
-            $this->calories = $_calories;
+            $this->madeFor = $_madeFor;
+            $this->madeOf = $_madeOf;
         }
     }
 
@@ -64,15 +64,15 @@
     $bird = new Category("Uccelli");
 
     $product_1 = new Food('Royal Canin', 8.20, 'Mini Adult', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000","Crocchette/Secco", "Manzo");
-    $product_2 = new Food('Almo Nature', 29.89, 'Holistic Maintenance Medium Large', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-dog-adult-medium-pollo-e-riso.jpg","Crocchette/Secco", "Pollo e riso");
+    $product_2 = new Food('Almo Nature', 29.89, 'Holistic Medium Large', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-dog-adult-medium-pollo-e-riso.jpg","Crocchette/Secco", "Pollo e riso");
     $product_3 = new Food('Almo Nature', 0.65, 'Cat Daily Lattina', $cat, "https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg","Umido", "Vitello");
-    $product_4 = new Food('Guppy', 3.36, 'Mangime per pesci in fiocchi', $fish, "https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg","Fiocchi", "/");
+    $product_4 = new Food('Guppy', 3.36, 'Mangime per pesci', $fish, "https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg","Fiocchi", "/");
 
     $product_5 = new Toy('Kong', 18.99, 'Kong Classic', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg","Cani di taglia medio/grande", "Plastica dura");
     $product_6 = new Toy('Trixie', 7.99, 'Topini di peluche', $cat, "https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg","Gatti di tutte le taglie", "Plastica/Polyestere");
 
     $product_7 = new Accessory('Wilma', 339, 'Voliera', $bird, "https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg","Uccelli di piccola taglia", "Legno");
-    $product_8 = new Accessory('EasyCrystal', 3, 'Cartucce Filtranti per Filtro ', $fish, "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000","Acquari per pesci", "Materiale naturale");
+    $product_8 = new Accessory('EasyCrystal', 3, 'Cartucce Filtranti', $fish, "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000","Acquari per pesci", "Materiale naturale");
 
 
     $products = [
@@ -97,5 +97,43 @@
     <title>OOP Shop</title>
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-center">OOP Shop</h3>
+            </div>
+            <?php foreach ($products as $product) {?>
+            <div class="box-cards text-center">
+                <div class="card" style="width: 18rem;">
+                    <img src=<?php echo $product->image ?> class="card-img-top" alt="Prodotto">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $product->name ?></h5>
+                        <p class="card-text fs-4"><?php echo $product->description ?></p>
+                        <p class="card-text">Categoria: <?php echo $product->category->name ?></p>
+                        <?php if ($product instanceof Food) { ?>
+                            <p class="card-text">Tipo di cibo: <?php echo $product->madeFor ?></p>
+                        <?php } ?>
+                        <?php if ($product instanceof Food) { ?>
+                            <p class="card-text">Gusto: <?php echo $product->madeOf ?></p>
+                        <?php } ?>
+                        <?php if ($product instanceof Toy) { ?>
+                            <p class="card-text">Ideale per: <?php echo $product->madeFor ?></p>
+                        <?php } ?>
+                        <?php if ($product instanceof Toy) { ?>
+                            <p class="card-text">Materiale: <?php echo $product->madeOf ?></p>
+                        <?php } ?>
+                        <?php if ($product instanceof Accessory) { ?>
+                            <p class="card-text">Ideale per: <?php echo $product->madeFor ?></p>
+                        <?php } ?>
+                        <?php if ($product instanceof Accessory) { ?>
+                            <p class="card-text">Materiale: <?php echo $product->madeOf ?></p>
+                        <?php } ?>
+                        <a href="#" class="btn btn-primary">Aggiungi al carrello</a>
+                    </div>
+                </div>
+            </div>
+            <?php } ?>
+        </div>
+    </div>
 </body>
 </html>
