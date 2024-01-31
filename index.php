@@ -97,43 +97,60 @@
     <title>OOP Shop</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h3 class="text-center">OOP Shop</h3>
-            </div>
-            <?php foreach ($products as $product) {?>
-            <div class="box-cards text-center">
-                <div class="card" style="width: 18rem;">
-                    <img src=<?php echo $product->image ?> class="card-img-top" alt="Prodotto">
-                    <div class="card-body">
-                        <h5 class="card-title"><?php echo $product->name ?></h5>
-                        <p class="card-text fs-4"><?php echo $product->description ?></p>
-                        <p class="card-text">Categoria: <?php echo $product->category->name ?></p>
-                        <?php if ($product instanceof Food) { ?>
-                            <p class="card-text">Tipo di cibo: <?php echo $product->madeFor ?></p>
-                        <?php } ?>
-                        <?php if ($product instanceof Food) { ?>
-                            <p class="card-text">Gusto: <?php echo $product->madeOf ?></p>
-                        <?php } ?>
-                        <?php if ($product instanceof Toy) { ?>
-                            <p class="card-text">Ideale per: <?php echo $product->madeFor ?></p>
-                        <?php } ?>
-                        <?php if ($product instanceof Toy) { ?>
-                            <p class="card-text">Materiale: <?php echo $product->madeOf ?></p>
-                        <?php } ?>
-                        <?php if ($product instanceof Accessory) { ?>
-                            <p class="card-text">Ideale per: <?php echo $product->madeFor ?></p>
-                        <?php } ?>
-                        <?php if ($product instanceof Accessory) { ?>
-                            <p class="card-text">Materiale: <?php echo $product->madeOf ?></p>
-                        <?php } ?>
-                        <a href="#" class="btn btn-primary">Aggiungi al carrello</a>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-5">
+                    <h1 class="text-center py-4">OOP Shop</h1>
+                </div>
+                <div class="col-7 d-flex align-items-center">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Cerca tra oltre 10.000 prodotti. Cerca per prodotto, categoria...">
+                        <button class="btn btn-dark" type="button">Cerca</button>
                     </div>
                 </div>
             </div>
-            <?php } ?>
         </div>
-    </div>
+    </header>
+
+    <main>    
+        <div class="container">
+            <div class="row">
+                <?php foreach ($products as $product) {?>
+                <div class="box-cards text-center">
+                    <div class="card" style="width: 18rem;">
+                        <img src=<?php echo $product->image ?> class="card-img-top" alt="Prodotto">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $product->name ?></h5>
+                            <p class="card-text fs-4"><?php echo $product->description ?></p>
+                            <p class="card-text">Categoria: <?php echo $product->category->name ?></p>
+                            <?php if ($product instanceof Food) { ?>
+                                <p class="card-text">Tipo di cibo: <?php echo $product->madeFor ?></p>
+                            <?php } ?>
+                            <?php if ($product instanceof Food) { ?>
+                                <p class="card-text">Gusto: <?php echo $product->madeOf ?></p>
+                            <?php } ?>
+                            <?php if ($product instanceof Toy) { ?>
+                                <p class="card-text">Ideale per: <?php echo $product->madeFor ?></p>
+                            <?php } ?>
+                            <?php if ($product instanceof Toy) { ?>
+                                <p class="card-text">Materiale: <?php echo $product->madeOf ?></p>
+                            <?php } ?>
+                            <?php if ($product instanceof Accessory) { ?>
+                                <p class="card-text">Ideale per: <?php echo $product->madeFor ?></p>
+                            <?php } ?>
+                            <?php if ($product instanceof Accessory) { ?>
+                                <p class="card-text">Materiale: <?php echo $product->madeOf ?></p>
+                            <?php } ?>
+                            <a href="#" class="btn btn-primary">Aggiungi al carrello</a>
+                        </div>
+                    </div>
+                </div>
+                <?php } ?>
+            </div>
+        </div>
+    </main>
+
+
 </body>
 </html>
