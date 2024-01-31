@@ -3,97 +3,62 @@
     class Products {
         public $name;
         public $price;
+        public $description;
         public $category;
+        public $image;
 
-        public function  __construct($_name, $_price) {
+        function  __construct($_name, $_price, $_description, $_category, $_image) {
             $this->name = $_name;
             $this->price = $_price;
-        }
-
-        public function getInfoFood(){
-            return "Nome: ".$this->name."<br>"."Prezzo: ".$this->price."€"."<br>"." Categoria: ".$this->category."<br>"." Cibo: ".$this->food;
-        }
-
-        public function getInfoToy(){
-            return "Nome: ".$this->name."<br>"."Prezzo: ".$this->price."€"."<br>"." Categoria: ".$this->category."<br>"." Giocattoli: ".$this->toy;
-        }
-
-        public function getInfoHouse(){
-            return "Nome: ".$this->name."<br>"."Prezzo: ".$this->price."€"."<br>"." Categoria: ".$this->category."<br>"." Casetta: ".$this->house;
+            $this->description = $_description;
+            $this->category = $_category;
+            $this->image = $_image;
         }
     }
 
-    class Dog_1 extends Products{
-        public $food;
-        public function __construct($name, $price, $_food){
-            parent::__construct($name, $price);
-            $this->category = 'Cane';
-            $this->food = $_food;
+    class Category {
+        public $name;
+
+        function __construct($_name){
+            $this -> name = $_name;
         }
     }
 
-    class Dog_2 extends Products{
-        public $toy;
-        public function __construct($name, $price, $_toy){
-            parent::__construct($name, $price);
-            $this->category = 'Cane';
-            $this->toy = $_toy;
+    class Food extends Products {
+        public $deadline;
+        public $calories;
+
+        function __construct($_name, $_price, $_description, $_category, $_image, $_deadline, $_calories){
+            parent::__construct($_name, $_price, $_description, $_category, $_image);
+            $this->deadline = $_deadline;
+            $this->calories = $_calories;
         }
     }
 
-    class Cat_1 extends Products{
-        public $food;
-        public function __construct($name, $price, $_food){
-            parent::__construct($name, $price);
-            $this->category = 'Gatto';
-            $this->food = $_food;
+    class Toy extends Products {
+        public $madeFor;
+        public $madeOf;
+
+        function __construct($_name, $_price, $_description, $_category, $_image, $_madeFor, $_madeOf){
+            parent::__construct($_name, $_price, $_description, $_category, $_image);
+            $this->madeFor = $_madeFor;
+            $this->madeOf = $_madeOf;
+        }
+
+    }
+
+    class Accessory extends Products {
+        public $madeFor;
+        public $madeOf;
+
+        function __construct($_name, $_price, $_description, $_category, $_image, $_madeFor, $_madeOf){
+            parent::__construct($_name, $_price, $_description, $_category, $_image);
+            $this->madeFor = $_madeFor;
+            $this->madeOf = $_madeOf;
         }
     }
 
-    class Cat_2 extends Products{
-        public $toy;
-        public function __construct($name, $price, $_toy){
-            parent::__construct($name, $price);
-            $this->category = 'Gatto';
-            $this->toy = $_toy;
-        }
-    }
 
-    class Birds_1 extends Products{
-        public $food;
-        public function __construct($name, $price, $_food){
-            parent::__construct($name, $price);
-            $this->category = 'Uccelli';
-            $this->food = $_food;
-        }
-    }
-
-    class Birds_2 extends Products{
-        public $house;
-        public function __construct($name, $price, $_house){
-            parent::__construct($name, $price);
-            $this->category = 'Uccelli';
-            $this->house = $_house;
-        }
-    }
-    
-    class Fishes_1 extends Products{
-        public $food;
-        public function __construct($name, $price, $_food){
-            parent::__construct($name, $price);
-            $this->category = 'Pesci';
-            $this->food = $_food;
-        }
-    }
-
-    class Fishes_2 extends Products{
-        public $house;
-        public function __construct($name, $price, $_house){
-            parent::__construct($name, $price);
-            $this->category = 'Pesci';
-            $this->house = $_house;
-        }
-    }
 
     // Subclasses Foods
     $dog_1 = new Dog_1 ('Royal Canin Mini Adult', 8.20, 'Cibo per cani');
