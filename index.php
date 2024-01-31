@@ -76,20 +76,14 @@
 
 
     $products = [
-            $food = [
-                    $dog_1, 
-                    $dog_2, 
-                    $cat_1, 
-                    $fish_1,
-                    ],
-            $toys = [
-                    $dog_3,
-                    $cat_2
-                    ],
-            $house = [
-                    $bird_1,
-                    $fish_2
-                    ]
+                    $product_1, 
+                    $product_2, 
+                    $product_3, 
+                    $product_4, 
+                    $product_5, 
+                    $product_6, 
+                    $product_7, 
+                    $product_8
                 ];
 
     foreach($food as $product){
