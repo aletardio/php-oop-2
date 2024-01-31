@@ -63,22 +63,17 @@
     $fish = new Category("Pesci");
     $bird = new Category("Uccelli");
 
+    $product_1 = new Food('Royal Canin Mini Adult', 8.20, 'Manzo', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000");
+    $product_2 = new Food('Almo Nature Holistic Maintenance Medium Large', 29.89, 'Tonno e Riso', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/245173/almo-nature-holistic-dog-adult-medium-pollo-e-riso.jpg");
+    $product_3 = new Food('Almo Nature Cat Daily Lattina', 0.65, 'Vitello', $cat, "https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg");
+    $product_4 = new Food('Mangime per Pesci Guppy in Fiocchi', 3.36, 'Fiochhi', $fish, "https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg");
 
+    $product_5 = new Toy('Kong Classic', 18.99, 'Plastica Dura', $dog, "https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg");
+    $product_6 = new Toy('Topini di peluche Trixie', 7.99, 'Plastica/Poliestere', $cat, "https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg");
 
+    $product_7 = new Accessory('Voliera Wilma', 339, 'Legno', $bird, "https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg");
+    $product_8 = new Accessory('Cartucce Filtranti per Filtro EasyCrystal', 3, 'Materiale Naturale', $fish, "https://arcaplanet.vtexassets.com/arquivos/ids/284621/Mini-Adult.jpg?v=638182891693570000");
 
-    // Subclasses Foods
-    $dog_1 = new Dog_1 ('Royal Canin Mini Adult', 8.20, 'Cibo per cani');
-    $dog_2 = new Dog_1 ('Almo Nature Holistic Maintenance Medium Large Tonno e Riso', 29.89, 'Cibo per cani');
-    $cat_1 = new Cat_1 ('Almo Nature Cat Daily Lattina', 0.65, 'Cibo per gatti');
-    $fish_1 = new Fishes_1 ('Mangime per Pesci Guppy in Fiocchi', 3.36, 'Cibo per pesci');
-
-    // Subclasses Toys
-    $dog_3 = new Dog_2 ('Kong Classic', 18.99, 'Giocattolo per cani');
-    $cat_2 = new Cat_2 ('Topini di peluche Trixie', 7.99, 'Giocattolo per gatti');
-
-    // Subclasses Houses
-    $bird_1 = new Birds_2 ('Voliera Wilma in Legno', 339, 'Voliera per uccelli');
-    $fish_2 = new Fishes_2 ('Cartucce Filtranti per Filtro EasyCrystal', 9, 'Ampolla per pesci ');
 
     $products = [
             $food = [
