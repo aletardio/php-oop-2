@@ -101,11 +101,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-5">
-                    <h1 class="text-center py-4">OOP Shop</h1>
+                    <h1 class="text-center py-4 fw-bold">OOP Shop</h1>
                 </div>
                 <div class="col-7 d-flex align-items-center">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Cerca tra oltre 10.000 prodotti. Cerca per prodotto, categoria...">
+                        <input type="text" class="form-control" placeholder="Cerca tra oltre 10.000 prodotti. Cerca per prodotto, categoria, gusto...">
                         <button class="btn btn-dark" type="button">Cerca</button>
                     </div>
                 </div>
